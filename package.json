@@ -1,0 +1,16 @@
+{
+  "name": "instagram-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [
+    "instagram",
+    "notes"
+  ],
+  "author": "Aditya Yadav",
+  "license": "ISC",
+  "description": "library to create and send instagram notes",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "uuid": "^9.0.1"
+  }
+}
