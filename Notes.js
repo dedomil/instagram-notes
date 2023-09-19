@@ -16,20 +16,21 @@ class Notes {
       );
       return { data, status };
     } catch (error) {
-      throw new Error("please enter a valid cookie")
+      throw new Error(error.toJSON().message)
     }
   };
 
-  setNote = async (text) => {
+  createNote = async (text, audience = 0) => {
     try {
       if (!text) throw new Error("can't send a empty note");
+      if (![0, 1].includes(parseInt(audience))) throw new Error("audience must be 0 or 1");
       const { data, status } = await api.post("/create_note",
-        { audience: 0, text, _uuid: uuid().toUpperCase() },
+        { audience: parseInt(audience), text, _uuid: uuid() },
         { headers: { "cookie": this.session } }
       );
       return { data, status };
     } catch (error) {
-      throw new Error("please enter a valid cookie")
+      throw new Error(error.toJSON().message)
     }
   }
 }

@@ -27,11 +27,11 @@ const client = new Notes("<insert-cookie-here>");
 })();
 ```
 
-### set a note
+### create a note
 
 ```js
 (async () => {
-  let response = await client.setNote("hello");
+  let response = await client.createNote("hello");
   console.log(response);
 })();
 ```
