@@ -1,7 +1,8 @@
-module.exports = {
-  baseURL: 'https://i.instagram.com/api/v1/notes',
-  headers: {
-    "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+{
+  "baseURL": "https://i.instagram.com/api/v1/notes/",
+  "loginURL": "https://i.instagram.com/api/v1/accounts/login/",
+  "defaultHeaders": {
+    "accept-language": "en-US",
     "authority": "www.instagram.com",
     "content-type": "application/x-www-form-urlencoded",
     "origin": "https://www.instagram.com",

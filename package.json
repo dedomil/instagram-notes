@@ -1,16 +1,25 @@
 {
   "name": "instagram-notes",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "keywords": [
     "instagram",
     "notes"
   ],
-  "author": "Aditya Yadav",
+  "author": "aditya yadav",
   "license": "ISC",
-  "description": "library to create and send instagram notes",
+  "description": "package for instagram notes",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts"
+  },
   "dependencies": {
-    "axios": "^1.5.0",
-    "uuid": "^9.0.1"
+    "axios": "^1.5.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
   }
 }
