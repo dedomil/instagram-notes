@@ -1,6 +1,6 @@
 {
   "name": "instagram-notes",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -15,7 +15,8 @@
     "build": "tsup index.ts --format cjs,esm --dts"
   },
   "dependencies": {
-    "axios": "^1.5.0"
+    "axios": "^1.5.0",
+    "query-string": "^9.1.1"
   },
   "devDependencies": {
     "tsup": "^8.3.5",
