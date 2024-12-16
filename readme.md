@@ -9,47 +9,45 @@ npm i instagram-notes
 ### importing the package
 
 ```js
-const Notes = require("instagram-notes");
+const Note = require("instagram-notes");
+```
+
+```js
+import Note from "instagram-notes";
+```
+
+### creating a sessionId
+
+```js
+const sessionId = await Note.getSessionId("username", "password");
 ```
 
 ### creating a client/instance
 
 ```js
-const client = new Notes("<insert-cookie-here>");
+const client = new Note(sessionId);
 ```
 
 ### get all notes
 
 ```js
-(async () => {
-  let response = await client.getNotes();
-  console.log(response);
-})();
+await client.getNotes();
 ```
 
 ### create a note
 
 ```js
-(async () => {
-  let response = await client.createNote("hello");
-  console.log(response);
-})();
+await client.createNote("hello");
 ```
 
 ### delete a note
 
 ```js
-(async () => {
-  let response = await client.deleteNote('<note-id>');
-  console.log(response);
-})();
+await client.deleteNote("<note-id>"); // id of *your* note from client.getNotes()
 ```
 
 ### update last seen time
 
 ```js
-(async () => {
-  let response = await client.lastSeenUpdateNote();
-  console.log(response);
-})();
+await client.lastSeenUpdateNote();
 ```
